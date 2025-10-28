@@ -1,5 +1,3 @@
-
-```markdown
 # NestJS Articles API — Teste Técnico
 
 API RESTful desenvolvida com **NestJS + TypeORM + PostgreSQL + Docker**, aplicando princípios de **SOLID**, **Clean Architecture** e **Dependency Injection**.
@@ -20,8 +18,7 @@ API RESTful desenvolvida com **NestJS + TypeORM + PostgreSQL + Docker**, aplican
 
 ## 🧱 Estrutura do Projeto
 
-```
-
+```bash
 src/
 ├── app.module.ts
 ├── main.ts
@@ -31,8 +28,7 @@ src/
 ├── infra/              # Camada de infraestrutura (ORM, Auth, Seeds)
 ├── modules/            # Camada de aplicação (controllers, services)
 └── ...
-
-````
+```
 
 **Padrões aplicados:**
 - **S**ingle Responsibility — classes com responsabilidade única  
@@ -55,9 +51,9 @@ src/
 
 ```bash
 docker compose up --build
-````
+```
 
-O servidor estará disponível em:
+O servidor estará disponível em:  
 👉 [http://localhost:3000](http://localhost:3000)
 
 ---
@@ -87,9 +83,9 @@ O servidor estará disponível em:
 
 ## 🧩 Testes no Postman
 
-1. Importe o arquivo `nest-articles-api.postman_collection.json`
-2. Execute o request **Auth → Login**
-3. O token será armazenado automaticamente
+1. Importe o arquivo `nest-articles-api.postman_collection.json`  
+2. Execute o request **Auth → Login**  
+3. O token será armazenado automaticamente  
 4. Teste as rotas protegidas (`/users`, `/articles`, `/permissions`)
 
 ---
@@ -118,22 +114,22 @@ O servidor estará disponível em:
 
 ## 🧾 Tecnologias Utilizadas
 
-* **NestJS** — Framework principal
-* **TypeORM** — ORM relacional
-* **PostgreSQL** — Banco de dados
-* **JWT + Passport** — Autenticação
-* **Bcrypt** — Hash de senhas
-* **Docker Compose** — Infraestrutura containerizada
+- **NestJS** — Framework principal  
+- **TypeORM** — ORM relacional  
+- **PostgreSQL** — Banco de dados  
+- **JWT + Passport** — Autenticação  
+- **Bcrypt** — Hash de senhas  
+- **Docker Compose** — Infraestrutura containerizada  
 
 ---
 
 ## 💡 Possíveis melhorias futuras
 
-* Implementar testes unitários (Jest)
-* Adicionar versionamento de API (v1, v2)
-* Criar camada de *use-cases* isolada (DDD)
-* Implementar Swagger para documentação automática
-* Adicionar auditoria (timestamps, logs)
+- Implementar testes unitários (Jest)  
+- Adicionar versionamento de API (v1, v2)  
+- Criar camada de *use-cases* isolada (DDD)  
+- Implementar Swagger para documentação automática  
+- Adicionar auditoria (timestamps, logs)  
 
 ---
 
@@ -143,7 +139,7 @@ A aplicação conta com testes **unitários e de integração** utilizando o **J
 
 ### 🧠 Estrutura de testes
 
-```
+```bash
 test/
 ├── users.service.spec.ts      # Testes unitários do UsersService
 ├── auth.service.spec.ts       # Testes unitários do AuthService
@@ -160,14 +156,26 @@ npm run test
 npm run test:watch
 ```
 
+💡 **Se estiver usando Docker:**
+
+```bash
+# Rodar testes dentro do container ativo
+docker exec -it nest-api npm run test
+
+# Ou rodar em container temporário
+docker compose run --rm api npm run test
+```
+
+---
+
 ### ✅ Cobertura dos testes
 
-* Criação e listagem de usuários (`UsersService`)
-* Autenticação e validação de credenciais (`AuthService`)
-* Endpoint público `/articles` (teste de integração)
-* Simulação de fluxo JWT básico
+- Criação e listagem de usuários (`UsersService`)  
+- Autenticação e validação de credenciais (`AuthService`)  
+- Endpoint público `/articles` (teste de integração)  
+- Simulação de fluxo JWT básico  
 
-Exemplo de resultado esperado:
+**Exemplo de resultado esperado:**
 
 ```
  PASS  test/users.service.spec.ts
@@ -183,8 +191,8 @@ Time:        4.12 s
 
 ## 🧑‍💼 Autor
 
-**Gerlisson Paulino**
-Senior Full Stack Developer • PHP | Node.js | Vue | React | AWS
+**Gerlisson Paulino**  
+Senior Full Stack Developer • PHP | Node.js | Vue | React | AWS  
 📧 [gerlisson.paulino@gmail.com](mailto:gerlisson.paulino@gmail.com)
 
 ---
