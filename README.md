@@ -1,8 +1,3 @@
-Perfeito 💪
-Aqui está o seu **README.md atualizado**, com a nova seção **🧪 Testes** adicionada de forma consistente ao final — explicando os tipos de testes, exemplos e comandos para execução.
-Mantive o mesmo tom profissional e visual do restante do documento.
-
----
 
 ```markdown
 # NestJS Articles API — Teste Técnico
